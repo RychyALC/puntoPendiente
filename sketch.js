@@ -1,5 +1,5 @@
-const p1 = {x:10, y:10 }
-const p2 = {x:800, y:300}
+const p1 = {x:0, y:0 }
+const p2 = {x:windowWidth, y:300}
 
 function setup(){
     createCanvas(windowWidth, windowHeight)
