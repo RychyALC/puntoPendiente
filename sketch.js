@@ -3,6 +3,7 @@
 
 function setup(){
     createCanvas(windowWidth, windowHeight)
+
     p1 = {x:0, y:0}
     p2 = {x:floor(windowWidth), y:floor(windowHeight)}
 
@@ -21,7 +22,7 @@ function draw(){
     ecuapp(p1,p2)
     ecuapp(p3,p4)
     ecuapp(p5,p6)
-    ecuapp(p7,p8)
+    ecuapp2(p7,p8)
 }
 
 function ecuapp(p1,p2){
@@ -29,7 +30,7 @@ function ecuapp(p1,p2){
     const dy = p2.y - p1.y
 
     const m = dy/dx
-    const b = p1.y - m * p1.x
+    b = p1.y - m * p1.x
 
     point(p1.x, p1.y)
 
@@ -39,5 +40,14 @@ function ecuapp(p1,p2){
         y = m * x + b
         point(x, y)
         x++
+    }
+    
+}
+function ecuapp2(p1,p2){
+    y = p1.y
+    x = p1.x
+    while(y != p2.y){
+        point(x,y)
+        y++
     }
 }
